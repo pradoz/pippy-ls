@@ -1,2 +1,7 @@
 include versioneer.py
+include requirements.txt
+graft pippy_ls
+recursive-exclude * *.py[co]
+include versioneer.py
 include pippy_ls/_version.py
+
