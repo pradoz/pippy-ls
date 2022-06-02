@@ -1,0 +1,2 @@
+include versioneer.py
+include pippy_ls/_version.py
