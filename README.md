@@ -1,8 +1,3 @@
 ## pippy long stockings
-A Python library to generate a random color
+A Python library
 
-## dev requirements
-- versioneer
-- black
-- twine
-- wheel

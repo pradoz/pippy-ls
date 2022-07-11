@@ -1,9 +1,31 @@
-from pippy_ls import pippy_ls
+# from generate import get_color
+#
+#
+# def main():
+#     get_color()
+#
+#
+# if __name__ == '__main__':
+#     main()
+# __main__.py
 
+import sys
+
+from pippy_ls import feed, viewer
 
 def main():
-    pippy_ls()
+    """Read the Real Python article feed"""
 
+    # If an article ID is given, then show the article
+    if len(sys.argv) > 1:
+        article = feed.get_article(sys.argv[1])
+        viewer.show(article)
 
-if __name__ == '__main__':
+    # If no ID is given, then show a list of all articles
+    else:
+        site = feed.get_site()
+        titles = feed.get_titles()
+        viewer.show_list(site, titles)
+
+if __name__ == "__main__":
     main()
