@@ -1,20 +1,9 @@
 from random import randint
-
-
-COLORS = [
-    "red",
-    "orange",
-    "yellow",
-    "green",
-    "blue",
-    "indigo",
-    "violet",
-]
-
-LIMIT = len(COLORS) - 1
+from colors import COLORS
 
 
 def pippy_ls():
+    LIMIT = len(COLORS) - 1
     seed = randint(0, LIMIT)
     color = COLORS[seed]
     return color
