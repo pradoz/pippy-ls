@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "pippy_ls"
-version = "1.0.2"
+version = "1.0.4"
 description = "An open-source python package"
 readme = "README.md"
 authors = [{ name = "Pippy Long Stockings", email = "zpprado@email.com" }]
@@ -33,7 +33,7 @@ Homepage = "https://github.com/pradoz/pippy-ls"
 pippy_ls = "pippy_ls.__main__:main"
 
 [tool.bumpver]
-current_version = "1.0.2"
+current_version = "1.0.4"
 version_pattern = "MAJOR.MINOR.PATCH"
 commit_message  = "Bump version {old_version} -> {new_version}"
 commit          = true
