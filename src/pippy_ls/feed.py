@@ -1,13 +1,13 @@
-from functools import cache
+# from functools import cache
 
 import feedparser
 import html2text
 import pippy_ls
 
 
-@cache
+# @cache
 def _get_feed(url=pippy_ls.URL):
-    """Read the web feed, use caching to only read it once"""
+    """Read the web feed""" #, use caching to only read it once"""
     return feedparser.parse(url)
 
 
@@ -23,7 +23,7 @@ def get_titles(url=pippy_ls.URL):
     return [a.title for a in articles]
 
 
-def get_article(article_id, url=reader.URL):
+def get_article(article_id, url=pippy_ls.URL):
     """Get article from feed with the given ID"""
     articles = _get_feed(url).entries
     article = articles[int(article_id)]
