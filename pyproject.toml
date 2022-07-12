@@ -39,8 +39,6 @@ pre-commit = "*"
 
 [tool.poetry.scripts]
 pippy_ls = "pippy_ls.__main__:main"
-test = "bash scripts/test.sh"
-lint = "bash scripts/lint.sh"
-format = "bash scripts/format.sh"
-mkdocs = "bash scripts/docs-live.sh"
-pre-commit = "pre-commit install"
+test = "bash scripts/test.sh:test"
+lint = "bash scripts/lint.sh:lint"
+pre-commit = "pre-commit install:precommit"
