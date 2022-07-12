@@ -32,13 +32,15 @@ pytest-cov = "*"
 mkdocs = "*"
 mkdocs-material = "*"
 markdown-include = "*"
+taskipy = "*"
 asgi-lifespan = "*"
 httpx = "*"
-pytest-asyncio = "*"
 pre-commit = "*"
 
 [tool.poetry.scripts]
 pippy_ls = "pippy_ls.__main__:main"
-test = "bash scripts/test.sh:test"
-lint = "bash scripts/lint.sh:lint"
-pre-commit = "pre-commit install:precommit"
+
+[tool.taskipy.tasks]
+test = "bash scripts/test.sh"
+lint = "bash scripts/lint.sh"
+pre-commit = "pre-commit install"
